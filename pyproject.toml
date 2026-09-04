@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kimvocal-cli"
+version = "0.1.0"
+description = "Fast PyTorch-free vocal separator for Kim_Vocal_2.onnx"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.9"
+dependencies = [
+    "onnxruntime",
+    "numpy",
+    "librosa",
+    "soundfile"
+]
+
+[project.scripts]
+kim-separate = "kimvocal-cli.cli:main"
